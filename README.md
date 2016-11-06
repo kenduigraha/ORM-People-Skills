@@ -5,12 +5,21 @@
 2. postgres ```npm install --save pg```
 
 ## Database Configuration
-1. Database's name :
+1. Database's name : db_user_skills
 2. Table :
-    * users
+    * users :
+      * username (STRING)
+      * password (STRING)
+      * email (STRING)
     * skills
-    *
-3. 
+      * data (STRING)
+
+## Note
+1. install dependencies
+2. sequelize init
+3. edit config/config.json
+4. make Users table : ```sequelize model:create --name Users --attributes "username:string,password:string,email:string"```
+5. migrate : ```sequelize db:migrate```
 
 ## Contributor
 Ken Duigraha Putra &copy; 2016
