@@ -1,0 +1,24 @@
+{
+  "name": "ORM_people_skills",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenduigraha/ORM-People-Skills.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kenduigraha/ORM-People-Skills/issues"
+  },
+  "homepage": "https://github.com/kenduigraha/ORM-People-Skills#readme",
+  "dependencies": {
+    "pg": "^6.1.0",
+    "sequelize": "^3.24.8"
+  }
+}
