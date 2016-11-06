@@ -13,7 +13,7 @@
       * password (STRING)
       * email (STRING)
     * skills
-      * data (STRING)
+      * value (STRING)
 
 ## Note
 1. install dependencies
@@ -22,7 +22,10 @@
 4. edit config/config.json
 5. make Users table : ```sequelize model:create --name Users --attributes "username:string,password:string,email:string"```
 6. migrate : ```sequelize db:migrate```
-7.
+7. make Skills table : ```sequelize model:create --name Skills --attributes "value:string"```
+8. migrate : ```sequelize db:migrate```
+9. seeding admin data into Users table : ```sequelize seed:create --name seed_users_admin```
+10. seed the admin seeder file ```sequelize db:seed --seed seeders/20161106234045-seed_users_admin.js```
 
 ## Contributor
 Ken Duigraha Putra &copy; 2016
