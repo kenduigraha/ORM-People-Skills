@@ -4,10 +4,9 @@ module.exports = function(sequelize, DataTypes) {
     value: DataTypes.STRING,
     name: {
       type: DataTypes.STRING,
-      validate: {
-        isUnique: sequelize.validateIsUnique('name')
-      }
-    }
+      unique: true
+    },
+    UsersId: DataTypes.INTEGER
   }, {
     classMethods: {
       associate: function(models) {
