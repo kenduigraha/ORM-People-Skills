@@ -2,8 +2,8 @@
 
 ## Dependecies
 1. sequelize : ```npm install --save-dev sequelize```
-2. postgres  : ```npm install --save pg```
-3. express generator : ```npm install -g express```
+2. sequelize : ```npm install --save-dev sequelize-cli```
+3. postgres  : ```npm install --save pg```
 
 ## Database Configuration
 1. Database's name : db_user_skills
