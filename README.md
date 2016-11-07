@@ -4,6 +4,7 @@
 1. sequelize : ```npm install --save-dev sequelize```
 2. sequelize : ```npm install --save-dev sequelize-cli```
 3. postgres  : ```npm install --save pg```
+4. sequelize-isunique-validator : ```npm install--save sequelize-isunique-validator```
 
 ## Database Configuration
 1. Database's name : db_user_skills

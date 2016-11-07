@@ -1,10 +1,15 @@
 'use strict';
+const Sequelize = require('sequelize')
+require('sequelize-isunique-validator')(Sequelize)
+
 module.exports = function(sequelize, DataTypes) {
   var Skills = sequelize.define('Skills', {
     value: DataTypes.STRING,
     name: {
       type: DataTypes.STRING,
-      unique: true
+      validate: {
+        isUnique: sequelize.validateIsUnique('name')
+      }
     },
     UserId: DataTypes.INTEGER
   }, {
