@@ -13,6 +13,7 @@
       * password (STRING)
       * email (STRING)
     * skills
+      * name (STRING)
       * value (STRING)
 
 ## Note
@@ -26,6 +27,8 @@
 8. migrate : ```sequelize db:migrate```
 9. seeding admin data into Users table : ```sequelize seed:create --name seed_users_admin```
 10. seed the admin seeder file ```sequelize db:seed --seed seeders/20161106234045-seed_users_admin.js```
+11. add new attribute to Skills table ```sequelize migration:create --name add_name_attribute_to_skills_table```
+10. migrate : ```sequelize db:migrate```
 
 ## Contributor
 Ken Duigraha Putra &copy; 2016
