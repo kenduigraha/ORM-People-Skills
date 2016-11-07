@@ -29,6 +29,8 @@
 10. seed the admin seeder file ```sequelize db:seed --seed seeders/20161106234045-seed_users_admin.js```
 11. add new attribute to Skills table ```sequelize migration:create --name add_name_attribute_to_skills_table```
 10. migrate : ```sequelize db:migrate```
+11. add FK : ```sequelize migration:create --name add_FK_to_skills_table```
+12. migrate : ```sequelize db:migrate```
 
 ## Contributor
 Ken Duigraha Putra &copy; 2016
