@@ -19,35 +19,35 @@ const Skills = models.Skills
   * test create user has many skills
   * remember : skills name must be unique
 */
-Users.create({
-  username  : "robot",
-  password  : "password",
-  email     : "power@ranger.com",
-  createdAt : new Date(),
-  updatedAt : new Date()
-}).then((user, err) => {
-  Skills.create({
-    name: "makankuaci",
-    value: "100",
-    UserId: user.dataValues.id,
-    createdAt : new Date(),
-    updatedAt : new Date()
-  })
-
-  Skills.create({
-    name: "pistolair",
-    value: "20",
-    UserId: user.dataValues.id,
-    createdAt : new Date(),
-    updatedAt : new Date()
-  })
-})
+// Users.create({
+//   username  : "robot",
+//   password  : "password",
+//   email     : "power@ranger.com",
+//   createdAt : new Date(),
+//   updatedAt : new Date()
+// }).then((user, err) => {
+//   Skills.create({
+//     name: "makankuaci",
+//     value: "100",
+//     UserId: user.dataValues.id,
+//     createdAt : new Date(),
+//     updatedAt : new Date()
+//   })
+//
+//   Skills.create({
+//     name: "pistolair",
+//     value: "20",
+//     UserId: user.dataValues.id,
+//     createdAt : new Date(),
+//     updatedAt : new Date()
+//   })
+// })
 /*
-  * find specidic user with his skills
+  * find specific user with his skills
 */
 // Users.findOne({
 //   where: {
-//     username: 'kabutaku'
+//     username: 'robot'
 //   },
 //   include : {
 //     model: Skills
@@ -62,3 +62,32 @@ Users.create({
 //     }
 //   })
 // })
+
+/*
+  * find specific user and edit skill's value
+*/
+
+Users.findOne({
+  where: {
+    username: 'robot'
+  },
+  include : {
+    model: Skills
+  }
+}).then((user, err) => {
+  // console.log(user.dataValues);
+  user.getSkills().then((skill, err) => {
+    for (var i = 0; i < skill.length; i++) {
+      if(skill[i].id === 1){
+        // console.log(skill[i]);
+        skill[i].value = 100
+        skill[i].save()
+        console.log(`=-=-=-=-=-=-=-=-=-=-=-=-=-`);
+        console.log(`Data after updated :`);
+        console.log(skill[i].name);
+        console.log(skill[i].value);
+        console.log(`=-=-=-=-=-=-=-=-=-=-=-=-=-`);
+      }
+    }
+  })
+})

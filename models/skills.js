@@ -4,7 +4,7 @@ require('sequelize-isunique-validator')(Sequelize)
 
 module.exports = function(sequelize, DataTypes) {
   var Skills = sequelize.define('Skills', {
-    value: DataTypes.STRING,
+    value: DataTypes.INTEGER,
     name: {
       type: DataTypes.STRING,
       validate: {
